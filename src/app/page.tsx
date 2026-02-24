@@ -1,35 +1,20 @@
-import { prisma } from "@/lib/prisma";
-import Navbar from "@/components/Navbar";
-import Hero from "@/components/Hero";
-import About from "@/components/About";
-import BlogPreview from "@/components/BlogPreview";
-import Contact from "@/components/Contact";
-import Footer from "@/components/Footer";
+import type { Metadata } from "next";
 
-export default async function Home() {
-  const posts = await prisma.post.findMany({
-    where: { published: true },
-    orderBy: { publishedAt: "desc" },
-    take: 3,
-    select: {
-      id: true,
-      slug: true,
-      title: true,
-      excerpt: true,
-      publishedAt: true,
-    },
-  });
+export const metadata: Metadata = {
+  title: "Nick Rodriquez",
+  description: "Site in progress.",
+};
 
+export default function Home() {
   return (
-    <>
-      <Navbar />
-      <main className="pt-16">
-        <Hero />
-        <About />
-        <BlogPreview posts={posts} />
-        <Contact />
-      </main>
-      <Footer />
-    </>
+    <main className="min-h-screen flex items-center justify-center bg-gray-950">
+      <div className="text-center">
+        <p className="text-indigo-400 font-mono text-sm tracking-widest uppercase mb-4">
+          Coming soon
+        </p>
+        <h1 className="text-4xl font-bold text-white mb-3">Nick Rodriquez</h1>
+        <p className="text-gray-500">Site in progress.</p>
+      </div>
+    </main>
   );
 }
