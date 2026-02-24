@@ -148,6 +148,13 @@ git push origin main                          # Triggers CI/CD pipeline
 
 ---
 
+## Workflow Rules
+
+- **Never push to GitHub without explicit user approval.** Always stop after local testing and wait for the user to say "push" or "deploy" before running `git push`.
+- **Test locally first.** Verify pages load correctly at http://spider:4000/nickrodriquezwww before requesting push approval.
+
+---
+
 ## Gotchas
 
 - **Prisma 7 does NOT support `url=` in `schema.prisma` datasource.** The connection string goes in `prisma.config.ts` and is passed to `PrismaClient` via the adapter. Do not put the connection URL in the datasource block.
