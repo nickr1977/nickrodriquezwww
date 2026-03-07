@@ -25,28 +25,28 @@ export default async function BlogPage() {
   return (
     <>
       <Navbar />
-      <main className="pt-16 min-h-screen bg-gray-950 text-gray-100">
+      <main className="pt-16 min-h-screen">
         <section className="py-24 px-6">
           <div className="max-w-5xl mx-auto">
             {/* Back link */}
             <Link
               href="/"
-              className="inline-block text-sm text-gray-400 hover:text-white transition-colors mb-12"
+              className="inline-block text-sm text-gray-500 hover:text-gray-900 transition-colors mb-12"
             >
               ← Home
             </Link>
 
             {/* Page header */}
             <div className="mb-12">
-              <p className="text-indigo-400 font-mono text-sm mb-4 tracking-widest uppercase">
+              <p className="text-indigo-600 font-mono text-sm mb-4 tracking-widest uppercase">
                 Blog
               </p>
-              <h1 className="text-5xl font-bold text-white">All writing</h1>
+              <h1 className="text-5xl font-bold text-gray-900">All writing</h1>
             </div>
 
             {/* Post grid or empty state */}
             {posts.length === 0 ? (
-              <div className="text-center py-16 border border-dashed border-gray-800 rounded-xl">
+              <div className="text-center py-16 border border-dashed border-gray-200 rounded-xl">
                 <p className="text-gray-500">Posts coming soon.</p>
               </div>
             ) : (
@@ -55,7 +55,7 @@ export default async function BlogPage() {
                   <Link
                     key={post.id}
                     href={`/blog/${post.slug}`}
-                    className="group bg-gray-900 border border-gray-800 rounded-xl p-6 hover:border-indigo-500/50 transition-colors"
+                    className="group bg-white border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-md hover:border-indigo-300 transition-all"
                   >
                     {post.publishedAt && (
                       <p className="text-gray-500 text-xs mb-3">
@@ -66,10 +66,10 @@ export default async function BlogPage() {
                         })}
                       </p>
                     )}
-                    <h2 className="text-white font-semibold mb-2 group-hover:text-indigo-400 transition-colors">
+                    <h2 className="text-gray-900 font-semibold mb-2 group-hover:text-indigo-600 transition-colors">
                       {post.title}
                     </h2>
-                    <p className="text-gray-400 text-sm leading-relaxed">{post.excerpt}</p>
+                    <p className="text-gray-600 text-sm leading-relaxed">{post.excerpt}</p>
                   </Link>
                 ))}
               </div>

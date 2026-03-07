@@ -2,6 +2,8 @@ import { prisma } from "@/lib/prisma";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
+import Services from "@/components/Services";
+import CareerTimeline from "@/components/CareerTimeline";
 import BlogPreview from "@/components/BlogPreview";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
@@ -26,6 +28,8 @@ export default async function Home() {
       <main className="pt-16">
         <Hero />
         <About />
+        <Services />
+        <CareerTimeline />
         <BlogPreview posts={posts} />
         <Contact />
       </main>
