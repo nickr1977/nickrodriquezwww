@@ -16,7 +16,7 @@ export default function Hero() {
           Hello, I&apos;m
         </p>
         <h1 className="text-6xl sm:text-7xl font-bold text-gray-900 leading-tight mb-4">
-          Nick Rodriguez
+          Nick Rodriquez
         </h1>
         <h2 className="text-2xl sm:text-3xl font-light text-gray-600 mb-6 min-h-[2.5rem]">
           <TypeWriter text="Solution Engineering Leader" />

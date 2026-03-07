@@ -27,11 +27,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   });
 
   if (!post) {
-    return { title: "Post Not Found — Nick Rodriguez" };
+    return { title: "Post Not Found — Nick Rodriquez" };
   }
 
   return {
-    title: `${post.title} — Nick Rodriguez`,
+    title: `${post.title} — Nick Rodriquez`,
     description: post.excerpt,
   };
 }

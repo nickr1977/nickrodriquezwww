@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Nick Rodriguez",
+  title: "Nick Rodriquez",
   description: "Solution Engineering Leader",
 };
 

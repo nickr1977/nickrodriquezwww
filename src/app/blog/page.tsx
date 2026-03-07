@@ -5,8 +5,8 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Blog — Nick Rodriguez",
-  description: "All writing by Nick Rodriguez.",
+  title: "Blog — Nick Rodriquez",
+  description: "All writing by Nick Rodriquez.",
 };
 
 export default async function BlogPage() {
