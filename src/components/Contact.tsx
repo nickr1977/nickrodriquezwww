@@ -1,7 +1,9 @@
+import ScrollReveal from "@/components/ui/ScrollReveal";
+
 export default function Contact() {
   return (
     <section id="contact" className="py-24 px-6 bg-gray-50">
-      <div className="max-w-5xl mx-auto text-center">
+      <ScrollReveal className="max-w-5xl mx-auto text-center">
         <p className="text-indigo-600 font-mono text-sm mb-4 tracking-widest uppercase">Contact</p>
         <h2 className="text-4xl font-bold text-gray-900 mb-4">Let&apos;s connect</h2>
         <p className="text-gray-600 mb-10 max-w-lg mx-auto">
@@ -22,7 +24,7 @@ export default function Contact() {
             LinkedIn
           </a>
         </div>
-      </div>
+      </ScrollReveal>
     </section>
   );
 }
