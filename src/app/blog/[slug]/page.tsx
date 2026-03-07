@@ -76,9 +76,10 @@ export default async function PostPage({ params }: Props) {
             </header>
 
             {/* Post content */}
-            <div className="prose prose-indigo max-w-none text-gray-700 leading-relaxed space-y-4 whitespace-pre-wrap">
-              {post.content}
-            </div>
+            <div
+              className="prose prose-indigo max-w-none"
+              dangerouslySetInnerHTML={{ __html: post.content }}
+            />
           </div>
         </article>
       </main>

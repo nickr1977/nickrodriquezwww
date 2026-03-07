@@ -10,8 +10,15 @@
     "studio": "prisma studio --port 5555"
   },
   "dependencies": {
+    "@google-cloud/storage": "^7.19.0",
     "@prisma/adapter-pg": "^7.4.1",
     "@prisma/client": "^7.4.1",
+    "@tailwindcss/typography": "^0.5.19",
+    "@tiptap/extension-image": "^3.20.1",
+    "@tiptap/extension-link": "^3.20.1",
+    "@tiptap/pm": "^3.20.1",
+    "@tiptap/react": "^3.20.1",
+    "@tiptap/starter-kit": "^3.20.1",
     "next": "16.1.6",
     "pg": "^8.18.0",
     "prisma": "^7.4.1",

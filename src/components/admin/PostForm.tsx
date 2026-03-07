@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef, useState } from "react";
+import RichEditor from "@/components/admin/RichEditor";
 
 type Post = {
   title: string;
@@ -104,18 +105,10 @@ export default function PostForm({
       </div>
 
       <div>
-        <label htmlFor="content" className="block text-sm font-medium text-gray-700 mb-1">
-          Content <span className="text-gray-400 font-normal">(Markdown)</span>
+        <label className="block text-sm font-medium text-gray-700 mb-1">
+          Content
         </label>
-        <textarea
-          id="content"
-          name="content"
-          required
-          rows={20}
-          defaultValue={post?.content ?? ""}
-          className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm font-mono text-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent resize-y"
-          placeholder="Write your post in Markdown…"
-        />
+        <RichEditor name="content" defaultValue={post?.content} />
       </div>
 
       <div className="flex items-center gap-3 pt-2">
