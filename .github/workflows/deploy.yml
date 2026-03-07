@@ -69,8 +69,8 @@ jobs:
             --platform=managed \
             --allow-unauthenticated \
             --add-cloudsql-instances=${{ secrets.CLOUD_SQL_CONNECTION_NAME }} \
-            --set-env-vars="DATABASE_URL=${{ secrets.DATABASE_URL }}" \
-            --set-env-vars="NODE_ENV=production" \
+            --set-env-vars="DATABASE_URL=${{ secrets.DATABASE_URL }},NODE_ENV=production" \
+            --set-secrets="ADMIN_SECRET=ADMIN_SECRET:latest" \
             --memory=512Mi \
             --cpu=1 \
             --min-instances=0 \
